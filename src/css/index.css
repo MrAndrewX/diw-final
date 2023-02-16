@@ -152,8 +152,6 @@ body main section {
 
 /* TITTLE DE CURSOS */
 
-@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
-
 :root {
   /* Base font size */
   font-size: 10px;   
@@ -243,7 +241,7 @@ h1:focus {
 }
 
 .card {
-  background: url(../src/img/logo.jpeg);
+  background: url(../img/logo.jpeg);
   width: var(--card-width);
   height: var(--card-height);
   padding: 3px;
