@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>KaliAcademy</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="#home"><img src="./img/logo.jpeg" alt="logo"/></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Cursos</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+      <div id="landing"></div>
+      <div class="contenedor">
+      <div class="cartel">
+        <img src="./img/logo.jpeg" alt="Imagen 1">
+        <h2>Título de la imagen 1</h2>
+        <p>Descripción de la imagen 1</p>
+        <span>Autor de la imagen 1</span>
+      </div>
+      <div class="cartel">
+        <img src="./img/logo.jpeg" alt="Imagen 2">
+        <h2>Título de la imagen 2</h2>
+        <p>Descripción de la imagen 2</p>
+        <span>Autor de la imagen 2</span>
+      </div>
+      <div class="cartel">
+        <img src="./img/logo.jpeg" alt="Imagen 3">
+        <h2>Título de la imagen 3</h2>
+        <p>Descripción de la imagen 3</p>
+        <span>Autor de la imagen 3</span>
+      </div>
+       <div class="cartel">
+        <img src="./img/logo.jpeg" alt="Imagen 3">
+        <h2>Título de la imagen 3</h2>
+        <p>Descripción de la imagen 3</p>
+        <span>Autor de la imagen 3</span>
+      </div>
+      
+    </div>
+    </header>
+<main></main>
+<footer></footer>
+    <script>
+      const burger = document.querySelector(".burger");
+      const nav = document.querySelector(".nav-links");
+      const navLinks = document.querySelectorAll(".nav-links li");
+
+      burger.addEventListener("click", () => {
+        // Toggle Nav
+        nav.classList.toggle("nav-active");
+
+        // Animate Links
+        navLinks.forEach((link, index) => {
+          if (link.style.animation) {
+            link.style.animation = "";
+          } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${
+              index / 7 + 0.3
+            }s`;
+          }
+        });
+
+        // Burger Animation
+        burger.classList.toggle("toggle");
+      });
+    </script>
+  </body>
+</html>
