@@ -21,6 +21,7 @@ body {
 body header {
   height: 100%;
   width: 100%;
+  z-index: 1;
 }
 
 nav {
@@ -162,6 +163,7 @@ body main section {
 }
 
 h1 {
+  z-index: 1;
   text-align: center;
   font-size: 13rem;
   font-weight: 200;
@@ -233,6 +235,7 @@ h1:focus {
 }
 
 .contenedor {
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -342,5 +345,57 @@ h1:focus {
   }
   100% {
     --rotate: 360deg;
+  }
+}
+
+/* animation bg */
+
+#background {
+  z-index: -3;
+}
+
+.rain-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.matrix-rain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #1D1E22;
+}
+
+.matrix-character {
+  position: absolute;
+  top: -50px;
+  font-size: 16px;
+  color: lightcoral;
+  animation: matrix-rain 5s linear infinite;
+  animation-delay: calc(0.1s * var(--char-index));
+}
+
+.line {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes matrix-rain {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 100%;
   }
 }
