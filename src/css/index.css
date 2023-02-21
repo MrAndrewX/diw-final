@@ -165,7 +165,7 @@ body main section {
 h1 {
   z-index: 1;
   text-align: center;
-  font-size: 13rem;
+  font-size: 50px;
   font-weight: 200;
   font-style: italic;
   color: #fff;
@@ -230,8 +230,8 @@ h1:focus {
 }
 
 :root {
-  --card-height: 20rem;
-  --card-width: calc(var(--card-height) / 1.5);
+  --card-height: 25rem;
+  --card-width: calc(var(--card-height) / 1);
 }
 
 .contenedor {
@@ -239,18 +239,18 @@ h1:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
   flex-wrap: wrap;
 }
 
 .card {
-  background: url(../img/logo.jpeg);
+  background: #fff;
   width: var(--card-width);
   height: var(--card-height);
   padding: 3px;
   margin: 2rem;
   position: relative;
-  border-radius: 6px;
+  border-radius: 12px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -403,4 +403,12 @@ h1:focus {
   100% {
     top: 100%;
   }
+}
+
+.line-info {
+  
+  background-color: green;
+  width: 100%;
+  height:60px;
+  
 }
