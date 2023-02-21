@@ -29,7 +29,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin-top: 3·;
-  background-color: #2c3e50;
+  
   height: 80px;
   padding: 0 50px;
 }
@@ -412,3 +412,4 @@ h1:focus {
   height:60px;
   
 }
+
