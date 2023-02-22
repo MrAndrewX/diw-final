@@ -10,13 +10,9 @@
   font-family: "Inconsolata", monospace;
 }
 body {
-  
   display: flex;
   flex-direction: column;
 }
-
-
-
 
 body header {
   height: 100%;
@@ -29,7 +25,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin-top: 3·;
-  
+  overflow: auto; /* enable scrolling  NO VA*/
   height: 80px;
   padding: 0 50px;
 }
@@ -47,6 +43,10 @@ nav {
 
 .nav-links li {
   list-style: none;
+}
+
+.nav-links li:hover {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .nav-links a {
@@ -139,7 +139,6 @@ header {
   background-position: center;
 }
 
-
 /* MAIN */
 
 body main section {
@@ -150,13 +149,12 @@ body main section {
   padding: 50px 0;
 }
 
-
 /* TITTLE DE CURSOS */
 
 :root {
   /* Base font size */
-  font-size: 10px;   
-  
+  font-size: 10px;
+
   /* Set neon color */
   --neon-text-color: #f40;
   --neon-border-color: #08f;
@@ -173,9 +171,9 @@ h1 {
   border: 0.4rem solid #fff;
   border-radius: 2rem;
   text-transform: uppercase;
-  animation: flicker 1.5s infinite alternate;     
-  background: #112 url(../img/bricks_bg.jpg)  center no-repeat;
-  background-size:cover;
+  animation: flicker 1.5s infinite alternate;
+  background: #112 url(../img/bricks_bg.jpg) center no-repeat;
+  background-size: cover;
 }
 
 h1::-moz-selection {
@@ -194,31 +192,30 @@ h1:focus {
 
 /* Animate neon flicker */
 @keyframes flicker {
-    
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-      
-        text-shadow:
-            -0.2rem -0.2rem 1rem #fff,
-            0.2rem 0.2rem 1rem #fff,
-            0 0 2rem var(--neon-text-color),
-            0 0 4rem var(--neon-text-color),
-            0 0 6rem var(--neon-text-color),
-            0 0 8rem var(--neon-text-color),
-            0 0 10rem var(--neon-text-color);
-        
-        box-shadow:
-            0 0 .5rem #fff,
-            inset 0 0 .5rem #fff,
-            0 0 2rem var(--neon-border-color),
-            inset 0 0 2rem var(--neon-border-color),
-            0 0 4rem var(--neon-border-color),
-            inset 0 0 4rem var(--neon-border-color);        
-    }
-    
-    20%, 24%, 55% {        
-        text-shadow: none;
-        box-shadow: none;
-    }    
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff,
+      0 0 2rem var(--neon-text-color), 0 0 4rem var(--neon-text-color),
+      0 0 6rem var(--neon-text-color), 0 0 8rem var(--neon-text-color),
+      0 0 10rem var(--neon-text-color);
+
+    box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff,
+      0 0 2rem var(--neon-border-color), inset 0 0 2rem var(--neon-border-color),
+      0 0 4rem var(--neon-border-color), inset 0 0 4rem var(--neon-border-color);
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
 }
 
 /* CARDS */
@@ -375,7 +372,7 @@ h1:focus {
   position: relative;
   width: 100%;
   height: 100%;
-  background: #1D1E22;
+  background: #1d1e22;
 }
 
 .matrix-character {
@@ -406,10 +403,75 @@ h1:focus {
 }
 
 .line-info {
-  
   background-color: green;
   width: 100%;
-  height:60px;
-  
+  height: 60px;
 }
 
+/* counter container */
+
+.counter-container {
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.counter-container section {
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.counter-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 25rem;
+  height: 12.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+  animation: float 5s ease-in-out infinite;
+}
+
+.counter {
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* counter animation */
+
+.counter-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.counter-item:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.counter-item:nth-child(3) {
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-30px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
