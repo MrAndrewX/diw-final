@@ -12,6 +12,8 @@
 body {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  width: 100%;
 }
 
 body header {
@@ -499,6 +501,8 @@ h1:focus {
   }
 }
 
+/* FOOTER */
+
 footer{
   background:var(--primary-color);
   padding:15px 0;
@@ -534,3 +538,24 @@ footer .text span a:hover{
   display:none;
 }
 
+@media (max-width:600px) {
+  /* estilos específicos para pantallas más pequeñas que 600px */
+
+  footer .text span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .counter-container section{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  body main {
+    gap: 80rem;
+  }
+
+}
