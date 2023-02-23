@@ -170,6 +170,11 @@ body main section {
 
 /* TITTLE DE CURSOS */
 
+.cursos{
+  
+  padding-bottom: 15%;
+}
+
 :root {
   /* Base font size */
   font-size: 10px;
@@ -178,6 +183,7 @@ body main section {
   --neon-text-color: #f40;
   --neon-border-color: #08f;
 }
+
 
 h1 {
   text-align: center;
@@ -492,3 +498,39 @@ h1:focus {
     transform: translatey(0px);
   }
 }
+
+footer{
+  background:var(--primary-color);
+  padding:15px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  z-index: 1;
+  background-color: rgb(62, 62, 67);
+}
+footer .text span{
+  font-size: 17px;
+  font-weight: 400;
+  color:var(--white-color);
+  z-index: 1;
+}
+footer .text span a{
+  font-weight: 500;
+  color:var(--white-color);
+}
+footer .text span a:hover{
+  text-decoration: underline;
+}
+/* Scroll To Top Button CSS */
+.scroll-button a{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  color:var(--white-color);
+  background:var(--primary-color);
+  padding:10px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0,0,0,0.15);
+  display:none;
+}
+
