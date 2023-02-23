@@ -19,6 +19,17 @@ body header {
   width: 100%;
   z-index: 1;
 }
+body main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+body main > * {
+  z-index: 1;
+}
 
 nav {
   display: flex;
@@ -28,6 +39,14 @@ nav {
   overflow: auto; /* enable scrolling  NO VA*/
   height: 80px;
   padding: 0 50px;
+}
+
+nav ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li {
+  padding: 1rem;
 }
 
 .logo {
@@ -161,7 +180,6 @@ body main section {
 }
 
 h1 {
-  z-index: 1;
   text-align: center;
   font-size: 50px;
   font-weight: 200;
@@ -232,7 +250,6 @@ h1:focus {
 }
 
 .contenedor {
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,7 +281,6 @@ h1:focus {
   object-fit: cover;
   border-radius: 8px;
   position: absolute;
-  z-index: 1;
   top: 0;
   left: 0;
 }
@@ -417,6 +433,7 @@ h1:focus {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  z-index: -1;
 }
 
 .counter-container section {
