@@ -100,6 +100,7 @@ nav ul li {
   }
 
   .nav-links {
+    z-index: 2;
     position: fixed;
     right: 0px;
     height: 100vh;
@@ -152,13 +153,13 @@ header {
 }
 
 /* LANDING IMAGE RESPONSIVE*/
-#landing {
-  height: 100vh;
-  width: 100%;
-  background-image: url(../img/landing.png);
-  background-size: cover;
-  background-position: center;
+#landing img{
+display: block;
+width: 100%;
+height: auto;
+
 }
+
 
 /* MAIN */
 
@@ -200,6 +201,13 @@ h1 {
   animation: flicker 1.5s infinite alternate;
   background: #112 url(../img/bricks_bg.jpg) center no-repeat;
   background-size: cover;
+  
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+    margin-top: -900px;
+  }
 }
 
 h1::-moz-selection {
@@ -263,6 +271,8 @@ h1:focus {
   align-items: center;
   height: 50vh;
   flex-wrap: wrap;
+  /*Llevar al fondo*/
+  z-index: -1;
 }
 
 .card {
