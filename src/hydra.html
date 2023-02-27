@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/plantilla-cursos.css">
+    <title>Curso hydra</title>
+</head>
+<body>
+   
+      <nav>
+        <div class="logo">
+          <a href="#home"><img src="./img/logo.jpeg" alt="logo" /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Cursos</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+    
+        </div>
+      </nav>
+      
+      <section>
+        <h2>Introducción</h2>
+        <p>Bienvenidos al curso de Hydra, una herramienta muy útil para la realización de ataques de fuerza bruta en sistemas protegidos con contraseñas. Durante el curso, aprenderemos a utilizar Hydra en combinación con Kali Linux.</p>
+        
+        <h2>Temario</h2>
+        <ul>
+          <li>Introducción a Hydra y Kali Linux</li>
+          <li>Instalación de Hydra y Kali Linux</li>
+          <li>Configuración de Hydra</li>
+          <li>Realización de ataques de fuerza bruta con Hydra</li>
+          <li>Protección contra ataques de fuerza bruta</li>
+        </ul>
+        
+        <h2>Requisitos</h2>
+        <p>Para tomar este curso, es necesario tener conocimientos básicos de Linux y redes de computadoras.</p>
+        
+        <h2>Profesor</h2>
+        <p>Andres Pantoja</p>
+
+        <!-- Video del curso -->
+        <div id="video-container">
+            <video autoplay loop muted>
+              <source src="img/49p0tf.mp4" type="video/mp4">
+            </video>
+            <div class="overlay">
+              <p>Inscríbete para ver el curso completo!</p>
+            </div>
+          </div>
+
+      </section>
+
+
+
+      
+      
+     
+
+      <script>
+        const navSlide = () => {
+          const burger = document.querySelector(".burger");
+          const nav = document.querySelector(".nav-links");
+          const navLinks = document.querySelectorAll(".nav-links li");
+    
+          burger.addEventListener("click", () => {
+            //Toggle Nav
+            nav.classList.toggle("nav-active");
+    
+            //Animate Links
+            navLinks.forEach((link, index) => {
+              if (link.style.animation) {
+                link.style.animation = "";
+              } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${
+                  index / 7 + 0.3
+                }s`;
+              }
+            });
+            //Burger Animation
+            burger.classList.toggle("toggle");
+          });
+        };
+    
+        navSlide();
+      </script>
+    
+</body>
+</html>
