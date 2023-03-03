@@ -153,13 +153,11 @@ header {
 }
 
 /* LANDING IMAGE RESPONSIVE*/
-#landing img{
-display: block;
-width: 100%;
-height: auto;
-
+#landing img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-
 
 /* MAIN */
 
@@ -173,8 +171,7 @@ body main section {
 
 /* TITTLE DE CURSOS */
 
-.cursos{
-  
+.cursos {
   padding-bottom: 15%;
 }
 
@@ -186,7 +183,6 @@ body main section {
   --neon-text-color: #f40;
   --neon-border-color: #08f;
 }
-
 
 h1 {
   text-align: center;
@@ -201,7 +197,6 @@ h1 {
   animation: flicker 1.5s infinite alternate;
   background: #112 url(../img/bricks_bg.jpg) center no-repeat;
   background-size: cover;
-  
 }
 @media screen and (max-width: 600px) {
   h1 {
@@ -513,59 +508,57 @@ h1:focus {
 
 /* FOOTER */
 
-footer{
-  background:var(--primary-color);
-  padding:15px 0;
+footer {
+  background: var(--primary-color);
+  padding: 15px 0;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   z-index: 1;
   background-color: rgb(62, 62, 67);
 }
-footer .text span{
+footer .text span {
   font-size: 17px;
   font-weight: 400;
-  color:var(--white-color);
+  color: var(--white-color);
   z-index: 1;
 }
-footer .text span a{
+footer .text span a {
   font-weight: 500;
-  color:var(--white-color);
+  color: var(--white-color);
 }
-footer .text span a:hover{
+footer .text span a:hover {
   text-decoration: underline;
 }
 /* Scroll To Top Button CSS */
-.scroll-button a{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  color:var(--white-color);
-  background:var(--primary-color);
-  padding:10px 12px;
+.scroll-button a {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: var(--white-color);
+  background: var(--primary-color);
+  padding: 10px 12px;
   font-size: 18px;
   border-radius: 6px;
-  box-shadow: rgba(0,0,0,0.15);
-  display:none;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
   /* estilos específicos para pantallas más pequeñas que 600px */
 
-  footer .text span{
+  footer .text span {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .counter-container section{
+  .counter-container section {
     display: flex;
     flex-direction: column;
-
   }
 
   body main {
     gap: 80rem;
   }
-
 }
