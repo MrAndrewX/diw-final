@@ -159,7 +159,7 @@ h1 {
   border-radius: 2rem;
   text-transform: uppercase;
   animation: flicker 1.5s infinite alternate;
-  background: #112 url(../img/bricks_bg.jpg) center no-repeat;
+  background: #112 url(../img/bricks_bg.webp) center no-repeat;
   background-size: cover;
   margin-bottom: 5rem;
 }
