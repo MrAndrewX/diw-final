@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>burger</title>
+    <link rel="stylesheet" href="burger.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo" id="iniciogo">
+          <a href="#iniciogo"><img src="./img/logo.jpeg" alt="logo" /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#iniciogo">Inicio</a></li>
+          <li><a href="#cursosgo">Cursos</a></li>
+          <li><a href="#aboutusgo">Nosotros</a></li>
+          <li><a href="#contactgo">Contacto</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+      <div id="landing">
+        <img src="img/landing.png" alt="" />
+      </div>
+    </header>
+    <script>
+      const burger = document.querySelector(".burger");
+      const nav = document.querySelector(".nav-links");
+      const navLinks = document.querySelectorAll(".nav-links li");
+
+      burger.addEventListener("click", () => {
+        // Toggle Nav
+        nav.classList.toggle("nav-active");
+
+        // Animate Links
+        navLinks.forEach((link, index) => {
+          if (link.style.animation) {
+            link.style.animation = "";
+          } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${
+              index / 7 + 0.3
+            }s`;
+          }
+        });
+
+        // Burger Animation
+        burger.classList.toggle("toggle");
+      });
+    </script>
+  </body>
+</html>

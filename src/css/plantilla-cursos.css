@@ -1,9 +1,9 @@
 body {
-    background-color: #2c3e50;
-    color: #95a5a6;
-    font-family: Arial, sans-serif;
-  }
-  nav {
+  background-color: #2c3e50;
+  color: #95a5a6;
+  font-family: Arial, sans-serif;
+}
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,58 +114,79 @@ nav ul li {
   border-radius: 50%;
   margin-right: 10px;
 }
-  
-  h2 {
-    color: #27ae60;
-    border-bottom: 1px solid #34495e;
-    padding-bottom: 5px;
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 5px;
-  }
-  
-  p {
-    margin-bottom: 15px;
-  }
-  
-  section {
-    width: 80%;
-    margin: 0 auto;
-  }
-  #video-container {
-    position: relative;
-    height: 0;
-    padding-bottom: 56.25%;
-    overflow: hidden;
-    background-color: #000000;
-  }
 
-  #video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: blur(40px);
-  }
+h2 {
+  color: #27ae60;
+  border-bottom: 1px solid #34495e;
+  padding-bottom: 5px;
+}
 
-  #video-container .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-size: 2em;
-    text-align: center;
+/* Imagen del curso */
+#imagen-curso {
+  width: 25rem;
+  height: 25rem;
+  object-fit: cover;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+#video-container {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+#video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(40px);
+}
+
+#video-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 2em;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  #imagen-curso {
+    width: 20rem;
+    height: 20rem;
   }
+}
+
+@media screen and (max-width: 480px) {
+  #imagen-curso {
+    width: 10rem;
+    height: 10rem;
+  }
+}

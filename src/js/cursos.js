@@ -202,6 +202,7 @@ function vistaCurso(curso){
   const imagen = document.createElement("img");
   imagen.src = curso.imagen;
   imagen.alt = curso.nombre;
+  imagen.id = "imagen-curso";
   contenedor.appendChild(imagen);
 
   // Introducción del curso
