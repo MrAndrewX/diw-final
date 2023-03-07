@@ -1,0 +1,3 @@
+- Quitar código duplicado
+
+- organizar css

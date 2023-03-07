@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/plantilla-cursos.css" />
+    <link rel="stylesheet" href="css/common.css" />
     <title>Curso hydra</title>
   </head>
   <body>
     <header>
       <nav>
         <div class="logo">
-          <a href="#home"><img src="./img/logo.webp" alt="logo" /></a>
+          <a href="index.html"><img src="./img/logo.webp" alt="logo" /></a>
         </div>
         <ul class="nav-links">
           <li><a href="index.html">Inicio</a></li>
@@ -31,34 +32,34 @@
         <div id="contenedor"></div>
       </section>
     </main>
-
+    <footer>
+      <div class="text">
+        <span><a href="#">Kali Akademy</a> | © 2023 All Rights Reserved.</span>
+      </div>
+    </footer>
     <script>
-      const navSlide = () => {
-        const burger = document.querySelector(".burger");
-        const nav = document.querySelector(".nav-links");
-        const navLinks = document.querySelectorAll(".nav-links li");
+      const burger = document.querySelector(".burger");
+      const nav = document.querySelector(".nav-links");
+      const navLinks = document.querySelectorAll(".nav-links li");
 
-        burger.addEventListener("click", () => {
-          //Toggle Nav
-          nav.classList.toggle("nav-active");
+      burger.addEventListener("click", () => {
+        //Toggle Nav
+        nav.classList.toggle("nav-active");
 
-          //Animate Links
-          navLinks.forEach((link, index) => {
-            if (link.style.animation) {
-              link.style.animation = "";
-            } else {
-              link.style.animation = `navLinkFade 0.5s ease forwards ${
-                index / 7 + 0.3
-              }s`;
-            }
-          });
-          //Burger Animation
-          burger.classList.toggle("toggle");
+        //Animate Links
+        navLinks.forEach((link, index) => {
+          if (link.style.animation) {
+            link.style.animation = "";
+          } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${
+              index / 7 + 0.3
+            }s`;
+          }
         });
-      };
-
-      navSlide();
+        //Burger Animation
+        burger.classList.toggle("toggle");
+      });
     </script>
-    <script src="../src/js/cursos.js"></script>
+    <script type="module" src="../src/js/cursos.js"></script>
   </body>
 </html>

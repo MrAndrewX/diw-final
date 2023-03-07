@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/common.css" />
     <title>KaliAcademy</title>
   </head>
   <body>
     <header>
       <nav>
-        <div class="logo" id="iniciogo">
-          <a href="#iniciogo"><img src="./img/logo.webp" alt="logo" /></a>
+        <div class="logo">
+          <a href="index.html"><img src="./img/logo.webp" alt="logo" /></a>
         </div>
         <ul class="nav-links">
-          <li><a href="#iniciogo">Inicio</a></li>
-          <li><a href="#cursosgo">Cursos</a></li>
-          <li><a href="#aboutusgo">Nosotros</a></li>
-          <li><a href="#contactgo">Contacto</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#cursosgo">Cursos</a></li>
+          <li><a href="index.html#aboutusgo">Nosotros</a></li>
+          <li><a href="index.html#contactgo">Contacto</a></li>
         </ul>
         <div class="burger">
           <div class="line1"></div>
@@ -25,11 +26,11 @@
           <div class="line3"></div>
         </div>
       </nav>
+    </header>
+    <main>
       <div id="landing">
         <img src="img/landing.webp" alt="" />
       </div>
-    </header>
-    <main>
       <div id="background">
         <div class="rain-background">
           <div class="matrix-rain" translate="no">
@@ -151,6 +152,6 @@
       });
     </script>
     <script src="../src/js/bg_animation.js"></script>
-    <script src="../src/js/generaTarjetas.js"></script>
+    <script type="module" src="../src/js/generaTarjetas.js"></script>
   </body>
 </html>
